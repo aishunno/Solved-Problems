@@ -1,1 +1,0 @@
-visited[nums[i]] = i;
