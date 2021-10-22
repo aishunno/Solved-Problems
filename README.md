@@ -1,5 +1,5 @@
-# Solved-Problems
+# LeetCode
 
 | # | Title | Solution | Difficulty
 | -- |--|--|--|
-|1| Two Sum | [C++](https://github.com/aishunno/Solved-Problems/blob/main/LeetCode/Easy/1_two_sum.cpp) | Easy
+|1| [Two Sum](https://leetcode.com/problems/two-sum/) | [C++](https://github.com/aishunno/Solved-Problems/blob/main/LeetCode/Easy/1_two_sum.cpp) | Easy
