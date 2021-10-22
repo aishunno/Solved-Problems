@@ -38,20 +38,6 @@ public:
     }
 };
 
-vector <int> twoSum(vector<int>& nums, int target) {
-    unordered_map<int, int> visited;
-    for (int i = 0; i < nums.size(); i ++) {
-        int required_number = target - nums[i];
-        
-        if (visited.count(required_number) > 0) {
-            return {visited.at(required_number), i};
-        } else {
-            visited[nums[i]] = i;
-        }
-    }
-    return {};
-}
-
 int main(void) {
     vector <int> nums = {3, 3};
     int target = 6;
