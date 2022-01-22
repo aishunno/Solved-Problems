@@ -10,7 +10,6 @@ var twoSum = function(nums, target) {
         const req_num = target - nums[i];
         
         if (visited.has(req_num)) {
-            console.log(visited.get(req_num))
             return [i, visited.get(req_num)];
         }
 
