@@ -1,6 +1,9 @@
 from typing import List
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(nums: List[int]) -> int:
+        if not(len(nums)):
+            return 0
+
         leftPtr = 1
         
         for i in range(1, len(nums)):
@@ -10,3 +13,4 @@ class Solution:
                 
         return leftPtr
         
+print(Solution.removeDuplicates([0, 0, 1, 1, 2, 2, 3, 3, 4]))
