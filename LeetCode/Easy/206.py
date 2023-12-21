@@ -10,6 +10,7 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head):
+        # If the head is not available or head is the only node 
         if head is None or head.next is None:
             return head
 
