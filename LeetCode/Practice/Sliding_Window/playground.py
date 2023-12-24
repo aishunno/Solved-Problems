@@ -1,26 +1,27 @@
-class ListNode:
-    def __init__(self, val=0, next=None):
+from typing import Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
         self.val = val
-        self.next = next
+        self.left = left
+        self.right = right
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        if not subRoot: return True 
+        if not root: return False
 
-def mergeLists(l1, l2):
-        dummy = ListNode()
-        node = dummy
+        if self.isSameTree(root, subRoot):
+            return True
+        else:
+            return (self.isSubtree(root.left, subRoot) or 
+            self.isSubtree(root.right, subRoot))
 
-        while l1 and l2:
-            if l1.val < l2.val:
-                node.next = l1
-                l1 = l1.next
-            else:
-                node.next = l2
-                l2 = l2.next
-            node = node.next
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        if not p and not q: return True
 
-        if l1:
-            node.next = l1
-        if l2:
-            node.next = l2
+        if not p or not q: return False 
 
-        return dummy.next   
-
-mergeLists(ListNode(1, ListNode(4, ListNode(5, None))), ListNode(1, ListNode(3, ListNode(4, None))))  
+        if p.val == q.val:
+            return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+        return False
